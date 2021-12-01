@@ -19,10 +19,10 @@ jobs:
         dotnet-version: '6.0.x'
         include-prerelease: true
     - name: Restore dependencies
-      run: dotnet restore ../ReportManagement.API.sln
+      run: dotnet restore ../ReportManagement.sln
     - name: Build
-      run: dotnet build ../ReportManagement.API.sln --no-restore
+      run: dotnet build ../ReportManagement.sln --no-restore
     - name: Test
-      run: dotnet test  ../ReportManagement.API.sln --no-build --verbosity normal --collect:"XPlat Code Coverage"
+      run: dotnet test  ../ReportManagement.sln --no-build --verbosity normal --collect:"XPlat Code Coverage"
     - name: Codecov
       uses: codecov/codecov-action@v1.5.2

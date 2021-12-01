@@ -19,8 +19,8 @@ Here's a brief intro about what a developer must do in order to start developing
 the project further:
 
 ```shell
-git clone https://github.com/PietrovW/ReportManagement.API.git
-cd ReportManagement.API/
+git clone https://github.com/PietrovW/ReportManagement.git
+cd ReportManagement/
 ```
 
 ## Technologies
@@ -33,6 +33,7 @@ Project is created with:
 * coverlet.collector version: 3.1
 * MongoDB version: 2.14
 * Microsoft.EntityFrameworkCore.Sqlite version: 6.0 
+* MassTransit version: 7.2
 
 ## Setup
 Project launch
