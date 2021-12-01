@@ -90,8 +90,6 @@ app.MapPost("api/reports", async (IValidator<CreateReportRequest> validator, IMe
 app.MapDelete("api/reports", async (IMediator mediator, Guid id) =>
 {
     await mediator.Send<IDeleteReportCommand>(new { Id = id });
-
-    //return Results.Del($"/reports/{id}", command);
 });
 app.MigrateDatabase();
 app.Run();
