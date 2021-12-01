@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  reportmanagement.api:
+    image: ${DOCKER_REGISTRY-}reportmanagementapi
+    build:
+      context: .
+      dockerfile: src/ReportManagement.API/Dockerfile
+    environment:
+      Mongo__ConnectionString: "mongodb://root:rootpassword@localhost:27017"
+      Mongo__DatabaseName: "testdb"

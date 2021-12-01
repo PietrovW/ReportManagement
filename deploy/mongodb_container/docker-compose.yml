@@ -1,0 +1,5 @@
+version: '3.5'
+
+services:
+   mongodb_container:
+    container_name: mongodb_container

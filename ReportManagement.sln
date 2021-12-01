@@ -1,0 +1,79 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{63E4DBAD-72A9-45D1-B01F-C47325BB97F6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "img", "img", "{F8A31760-A6F8-480F-A1B7-E180B7AB21C1}"
+	ProjectSection(SolutionItems) = preProject
+		img\AddNewPackageMediaR.png = img\AddNewPackageMediaR.png
+		img\AddNewProjectReportManagement.Api.png = img\AddNewProjectReportManagement.Api.png
+		img\AddNewProjectReportManagement.Application.png = img\AddNewProjectReportManagement.Application.png
+		img\AddNewProjectReportManagement.Domain.png = img\AddNewProjectReportManagement.Domain.png
+		img\AddNewProjectReportManagement.Infrastructure.png = img\AddNewProjectReportManagement.Infrastructure.png
+		img\AddNewProjectReportManagementLibrary.png = img\AddNewProjectReportManagementLibrary.png
+		img\FirameworkNET6.png = img\FirameworkNET6.png
+		img\NewPackageMediaR.png = img\NewPackageMediaR.png
+		img\NewProject.bmp = img\NewProject.bmp
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReportManagement.Infrastructure", "src\ReportManagement.Infrastructure\ReportManagement.Infrastructure.csproj", "{6F905F9A-A54E-4C2B-B2A3-BC6B79D70B52}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReportManagement.Domain", "src\ReportManagement.Domain\ReportManagement.Domain.csproj", "{0405291B-3DCE-4882-A450-C21EE0ADA9E6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReportManagement.API", "src\ReportManagement.API\ReportManagement.API.csproj", "{922B0AB3-65CA-4A33-BD4D-5F67F3E119C9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{E4D8581A-9C6D-47AF-B09C-14D89BE41935}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReportManagement.Api.Test.Acceptance", "test\ReportManagement.Api.Test.Acceptance\ReportManagement.Api.Test.Acceptance.csproj", "{F572CEAA-8114-4AF0-A5AF-4A36AD0B4C3B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReportManagement.Infrastructure.Test", "test\ReportManagement.Infrastructure.Test\ReportManagement.Infrastructure.Test.csproj", "{3128ADB2-2CC4-4305-AF35-402F9B4F50A5}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{B6E5F468-8076-4416-AC56-84E96F33349E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6F905F9A-A54E-4C2B-B2A3-BC6B79D70B52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F905F9A-A54E-4C2B-B2A3-BC6B79D70B52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F905F9A-A54E-4C2B-B2A3-BC6B79D70B52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F905F9A-A54E-4C2B-B2A3-BC6B79D70B52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0405291B-3DCE-4882-A450-C21EE0ADA9E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0405291B-3DCE-4882-A450-C21EE0ADA9E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0405291B-3DCE-4882-A450-C21EE0ADA9E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0405291B-3DCE-4882-A450-C21EE0ADA9E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{922B0AB3-65CA-4A33-BD4D-5F67F3E119C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{922B0AB3-65CA-4A33-BD4D-5F67F3E119C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{922B0AB3-65CA-4A33-BD4D-5F67F3E119C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{922B0AB3-65CA-4A33-BD4D-5F67F3E119C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F572CEAA-8114-4AF0-A5AF-4A36AD0B4C3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F572CEAA-8114-4AF0-A5AF-4A36AD0B4C3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F572CEAA-8114-4AF0-A5AF-4A36AD0B4C3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F572CEAA-8114-4AF0-A5AF-4A36AD0B4C3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3128ADB2-2CC4-4305-AF35-402F9B4F50A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3128ADB2-2CC4-4305-AF35-402F9B4F50A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3128ADB2-2CC4-4305-AF35-402F9B4F50A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3128ADB2-2CC4-4305-AF35-402F9B4F50A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6E5F468-8076-4416-AC56-84E96F33349E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6E5F468-8076-4416-AC56-84E96F33349E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6E5F468-8076-4416-AC56-84E96F33349E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6E5F468-8076-4416-AC56-84E96F33349E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6F905F9A-A54E-4C2B-B2A3-BC6B79D70B52} = {63E4DBAD-72A9-45D1-B01F-C47325BB97F6}
+		{0405291B-3DCE-4882-A450-C21EE0ADA9E6} = {63E4DBAD-72A9-45D1-B01F-C47325BB97F6}
+		{922B0AB3-65CA-4A33-BD4D-5F67F3E119C9} = {63E4DBAD-72A9-45D1-B01F-C47325BB97F6}
+		{F572CEAA-8114-4AF0-A5AF-4A36AD0B4C3B} = {E4D8581A-9C6D-47AF-B09C-14D89BE41935}
+		{3128ADB2-2CC4-4305-AF35-402F9B4F50A5} = {E4D8581A-9C6D-47AF-B09C-14D89BE41935}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9E844888-D3C9-4F78-896A-80DB2F70292C}
+	EndGlobalSection
+EndGlobal

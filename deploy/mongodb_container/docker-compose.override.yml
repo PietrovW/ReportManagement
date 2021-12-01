@@ -1,0 +1,21 @@
+version: '3.5'
+
+services:
+  mongodb_container:
+    container_name: mongodb_container
+    image: mongo:latest
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_USER}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_PASSWORD}
+    ports:
+      - ${MONGO_PORT}:27017
+    networks:
+      - mongodb
+    volumes:
+      - mongodb_data_volumes:/data/db
+networks:
+  mongodb:
+    driver: bridge
+
+volumes:
+  mongodb_data_volumes:

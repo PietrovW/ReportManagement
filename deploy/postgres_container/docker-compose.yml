@@ -1,0 +1,8 @@
+version: '3.5'
+
+services:
+  postgres_container:
+    container_name: postgres_container
+  
+  pgadmin:
+    container_name: pgadmin_container
