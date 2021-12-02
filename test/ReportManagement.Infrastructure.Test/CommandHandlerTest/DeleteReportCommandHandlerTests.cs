@@ -7,8 +7,11 @@ using ReportManagement.Application.AutoMapper;
 using ReportManagement.Application.CommandHandler;
 using ReportManagement.Application.Common;
 using ReportManagement.Application.Events;
+using ReportManagement.Domain.Models;
 using ReportManagement.Domain.Repositorys;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -22,11 +25,12 @@ namespace ReportManagement.Infrastructure.Test.CommandHandlerTest
             //Arange
             var _mediatorMock = new Mock<IMediator>();
             var _readReportRepository = new Mock<IReadReportRepository>();
+            var listReportModel = new List<ReportModel?>();
+            var idtest = Guid.NewGuid();
+            _readReportRepository.Setup(x => x.GetByIdAsync(It.IsAny<Guid>()))
+                .Returns(Task.FromResult( new ReportModel() { Id = idtest, Name = "test" })
+             );
             var _writeReportRepositoryMock = new Mock<IWriteReportRepository>();
-            var config = new MapperConfiguration(configuration =>
-            {
-                configuration.AddMaps(typeof(Profiles).Assembly);
-            });
 
             var _commandMock = new Mock<ConsumeContext<IDeleteReportCommand>>();
             _commandMock.Setup(x => x.Message.Id).Returns(Guid.NewGuid());
@@ -36,7 +40,7 @@ namespace ReportManagement.Infrastructure.Test.CommandHandlerTest
             await handler.Consume(_commandMock.Object);
 
             //Asert
-            _commandMock.Verify(x => x.Publish<IDeleteReportEvents>(It.IsAny<object>(), default(CancellationToken)), Times.Once);
+            _mediatorMock.Verify(x => x.Publish<IDeleteReportEvents>(It.IsAny<object>(), default(CancellationToken)), Times.Once);
         }
     }
 }
