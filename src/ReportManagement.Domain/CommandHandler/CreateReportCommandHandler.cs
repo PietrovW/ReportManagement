@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 using MassTransit;
 using MassTransit.Mediator;
-//using MediatR;
 using ReportManagement.Application.Common;
 using ReportManagement.Application.Events;
 using ReportManagement.Domain.Models;
