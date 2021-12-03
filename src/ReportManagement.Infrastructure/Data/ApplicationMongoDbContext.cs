@@ -7,15 +7,17 @@ namespace ReportManagement.Infrastructure.Data
 {
     public class ApplicationMongoDbContext : IApplicationMongoDbContext
     {
-        private IMongoDatabase _database { get; set; }
-        public IClientSessionHandle Session { get; set; }
-        public MongoClient MongoClient { get; set; }
-        private MongoOptions mongoSettings { get; set; }
+        private IMongoDatabase _database { get; set; } = null!;
+        public IClientSessionHandle Session { get; set; } = null!;
+        public MongoClient MongoClient { get; set; } = null!;
+        private MongoOptions mongoSettings { get; set; } = null!;
 
 
-        private readonly List<Func<Task>> _commands;
+        private readonly List<Func<Task>> _commands = new List<Func<Task>>();
         protected ApplicationMongoDbContext()
+            :base()
         {
+
         }
         public ApplicationMongoDbContext(IOptions<MongoOptions> settings)
         {

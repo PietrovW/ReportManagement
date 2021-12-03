@@ -3,7 +3,6 @@ using MassTransit;
 using MassTransit.Mediator;
 using Moq;
 using NUnit.Framework;
-using ReportManagement.Application.AutoMapper;
 using ReportManagement.Application.CommandHandler;
 using ReportManagement.Application.Common;
 using ReportManagement.Application.Events;
@@ -11,7 +10,6 @@ using ReportManagement.Domain.Models;
 using ReportManagement.Domain.Repositorys;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -28,8 +26,7 @@ namespace ReportManagement.Infrastructure.Test.CommandHandlerTest
             var listReportModel = new List<ReportModel?>();
             var idtest = Guid.NewGuid();
             _readReportRepository.Setup(x => x.GetByIdAsync(It.IsAny<Guid>()))
-                .Returns(Task.FromResult( new ReportModel() { Id = idtest, Name = "test" })
-             );
+                .ReturnsAsync( new ReportModel() { Id = idtest, Name = "test" });
             var _writeReportRepositoryMock = new Mock<IWriteReportRepository>();
 
             var _commandMock = new Mock<ConsumeContext<IDeleteReportCommand>>();

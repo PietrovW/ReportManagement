@@ -1,5 +1,4 @@
-﻿using AutoMapper;
-using MassTransit;
+﻿using MassTransit;
 using MassTransit.Mediator;
 using ReportManagement.Application.Common;
 using ReportManagement.Application.Events;
@@ -26,8 +25,8 @@ namespace ReportManagement.Application.CommandHandler
         public async Task Consume(ConsumeContext<IDeleteReportCommand> context)
         {
             ReportModel? reportModel = await _readReportRepository.GetByIdAsync(context.Message.Id);
-            _reportRepository.Delete(reportModel);
-            await _mediator.Publish<IDeleteReportEvents>(new { Id = reportModel.Id, Description = typeof(IDeleteReportCommand).Name });
+            _reportRepository.Delete(reportModel!);
+            await _mediator.Publish<IDeleteReportEvents>(new { Id = reportModel?.Id, Description = typeof(IDeleteReportCommand).Name });
         }
     }
 }

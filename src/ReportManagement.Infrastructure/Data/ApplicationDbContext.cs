@@ -11,9 +11,10 @@ namespace ReportManagement.Infrastructure.Data
         {
         }
         protected ApplicationDbContext()
+            :base()
         {
         }
-        public DbSet<ReportModel> Reports { get; set; }
+        public DbSet<ReportModel> Reports { get; set; } = null!;
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.ApplyConfiguration(new ReportTypeConfiguration());
