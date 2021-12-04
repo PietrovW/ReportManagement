@@ -13,16 +13,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - uses: actions/setup-dotnet@v1
     - name: Setup .NET
+      uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: '6.0.x'
-        include-prerelease: true
+        dotnet-version: 6.0.x
     - name: Restore dependencies
       run: dotnet restore ../ReportManagement.sln
     - name: Build
       run: dotnet build ../ReportManagement.sln --no-restore
     - name: Test
-      run: dotnet test  ../ReportManagement.sln --no-build --verbosity normal --collect:"XPlat Code Coverage"
-    - name: Codecov
-      uses: codecov/codecov-action@v1.5.2
+      run: dotnet test ../ReportManagement.sln --no-build --verbosity normal
