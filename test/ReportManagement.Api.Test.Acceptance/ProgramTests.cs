@@ -86,11 +86,17 @@ namespace ReportManagement.Api.Test.Acceptance
                 })
                 .AddTransient(provider =>
                 {
-                    return (IWriteReportRepository)_writeReportRepositoryMock.Object;
+                    return _writeReportRepositoryMock.Object;
+                })
+                .AddMediator(cfg =>
+                {
+                    cfg.AddConsumer<CreateReportCommandHandler>();
                 })
                 .AddMassTransitInMemoryTestHarness(cfg =>
                 {
                     cfg.AddConsumer<CreateReportCommandHandler>();
+                    
+
                 })
                 .BuildServiceProvider(true);
 
