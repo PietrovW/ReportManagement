@@ -9,3 +9,12 @@ services:
     environment:
       Mongo__ConnectionString: "mongodb://root:rootpassword@localhost:27017"
       Mongo__DatabaseName: "testdb"
+  
+
+
+  reportmanagement.web:
+    image: ${DOCKER_REGISTRY-}reportmanagementweb
+    build:
+      context: .
+      dockerfile: src/ui/ReportManagement.Web/Dockerfile
+

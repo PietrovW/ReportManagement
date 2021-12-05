@@ -9,12 +9,14 @@ using ReportManagement.Application.AutoMapper;
 using ReportManagement.Application.CommandHandler;
 using ReportManagement.Application.Common;
 using ReportManagement.Application.Dtos;
+using ReportManagement.Application.Events;
 using ReportManagement.Application.QuerieHandler;
 using ReportManagement.Application.Queries;
 using ReportManagement.Data.Configurations;
 using ReportManagement.Domain.Models;
 using ReportManagement.Domain.Repositorys;
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace ReportManagement.Api.Test.Acceptance

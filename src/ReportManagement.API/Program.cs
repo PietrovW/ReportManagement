@@ -55,7 +55,6 @@ builder.Services.AddMediator(cfg =>
     cfg.AddConsumers(assemblie);
 });
 var app = builder.Build();
-
 app.UseHttpsRedirection();
 
 app.UseStaticFiles();
